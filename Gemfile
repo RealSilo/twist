@@ -8,7 +8,7 @@ gem 'pg'
 gem 'devise', '4.1.1'
 gem 'sidekiq', '4.1.2'
 gem 'redcarpet'
-gem 'nokogiri'
+gem 'nokogiri', '~> 1.7', '>= 1.7.0.1'
 gem 'paperclip'
 gem 'pygments.rb'
 
