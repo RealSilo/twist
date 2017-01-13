@@ -8,6 +8,8 @@ require 'capybara/rspec'
 require 'sidekiq/testing'
 Sidekiq::Testing.inline!
 
+Capybara.app_host = "http://lvh.me"
+
 require 'capybara/poltergeist'
 Capybara.javascript_driver = :poltergeist
 

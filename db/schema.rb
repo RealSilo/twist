@@ -10,13 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170111175421) do
+ActiveRecord::Schema.define(version: 20170113080035) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "accounts", force: :cascade do |t|
-    t.string "name", null: false
+    t.string  "name",      null: false
+    t.integer "owner_id"
+    t.string  "subdomain"
+    t.index ["subdomain"], name: "index_accounts_on_subdomain", using: :btree
   end
 
   create_table "books", force: :cascade do |t|
