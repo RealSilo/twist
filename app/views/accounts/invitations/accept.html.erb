@@ -1,0 +1,14 @@
+<div class='row'>
+  <div class='content col-md-offset-4 col-md-4'>
+    <h2>Accepting an invitation</h2>
+    <p>
+      You are accepting an invitation to join the <%= @invitation.account.name %>.
+    </p>
+
+    <% if user_signed_in? %>
+      <%= render 'user_accept' %>
+    <% else %>
+      <%= render 'anonymus_accept' %>
+    <% end %>
+  </div>
+</div>
